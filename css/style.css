@@ -29,7 +29,14 @@
 /* CUSTOM PROPS */
 :root {
   --text-color: #333;
+  --text-color1: #000;
+  --light-brown: #dfc3a4;
   --acsent-color-green: #0a775f;
+  --acsent-color-green-80: rgba(10, 117, 94, 0.8);
+  --acsent-color-green-60: rgba(10, 117, 94, 0.6);
+  --acsent-color-light-brown: #c99b67;
+  --acsent-color-light-brown-80: rgba(201, 155, 103, 0.8);
+  --acsent-color-light-brown-60: rgba(201, 155, 103, 0.6);
   --outline-color: var(--acsent-color-green);
 }
 
@@ -70,6 +77,52 @@ img {
 }
 
 
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 16px 24px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 100px;
+}
+
+
+/* GREEN-BUTTON */
+.button-green {
+  background-color: var(--acsent-color-green);
+  color: #fff;
+}
+
+.button-green:hover {
+  background-color: var(--acsent-color-green-80);
+}
+
+.button-green:active {
+  background-color: var(--acsent-color-green-60);
+}
+
+
+/* BROWN-BUTTON */
+.button-brown {
+  --outline-color: var(--acsent-color-light-brown);
+  background-color: var(--acsent-color-light-brown);
+  color: #fff;
+}
+
+.button-brown:hover {
+  background-color: var(--acsent-color-light-brown-80);
+}
+
+.button-brown:active {
+  background-color: var(--acsent-color-light-brown-60);
+}
+
+
 /* CONTAINER */
 .container {
   width: 100%;
@@ -88,6 +141,7 @@ img {
 
 /* SITE HEADER INTRO WRAPPER */
 .site-header-hero-wrapper {
+  background-color: var(--light-brown);
   background-image: url(../img/site-header-intro-img.jpg);
 }
 
@@ -156,6 +210,63 @@ img {
 }
 
 
+/* HERO */
+.hero {
+  padding: 116px 0 249px;
+  background-color: var(--wheat);
+  background-image: url(../img/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 365px) top;
+  background-size: 710px 696px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+}
+
+.hero-info-wrapper {
+  margin: 0 auto 0 150px;
+  max-width: 464px;
+  width: 100%;
+}
+
+.hero-heading {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 24px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--text-color1);
+}
+
+.hero-text {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+}
+
+.hero-text:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.hero-img-badge {
+  position: absolute;
+  transform: rotate(-25deg);
+  z-index: 1;
+  top: 49px;
+  left: calc(50% + -55px);
+  border-radius: 100%;
+}
+
+
+
+
 
 
 /* RETINA */
@@ -167,7 +278,11 @@ only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
 
   .site-header-hero-wrapper {
-    background-image: url("../img/site-header-intro-img@2x.jpg 2x");
+    background-image: url("../img/site-header-intro-img@2x.jpg");
   }
 
+  .hero {
+    background-image: url("../img/hero-img@2x.jpg");
+
+  }
 }
