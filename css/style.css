@@ -143,6 +143,7 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text-color);
+  white-space: nowrap;
 }
 
 .sitenav-link:hover {
