@@ -283,6 +283,7 @@ only screen and (min-resolution: 2dppx) {
 
   .hero {
     background-image: url("../img/hero-img@2x.jpg");
+  }
 
   }
 }
