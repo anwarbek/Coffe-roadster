@@ -433,6 +433,127 @@ img {
 }
 
 
+/* HOW-IT-WORKS */
+.how-it-works-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 50px 30px;
+  background-color: var(--acsent-color-green);
+  background-image: url("../img/how-it-works-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.how-it-works-heading {
+  margin: 0 0 80px;
+  padding: 0;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff
+}
+
+.how-it-works-sticker {
+  position: absolute;
+  transform: rotate(22deg);
+  top: 41px;
+  right: 68px;
+  width: 192px;
+  height: 129px;
+  object-fit: cover;
+}
+
+.how-it-works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 30px -20px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  counter-reset: number;
+}
+
+.how-it-works-item {
+  margin: 0 0 30px 20px;
+  padding: 0;
+  min-width: 433px;
+  width: calc(100% / 3 - 20px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.how-it-works-item::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  background-color: var(--lite-bg-color);
+  border: 4px solid var(--acsent-color-light-brown);
+  z-index: 1;
+}
+
+.how-it-works-hr {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.how-it-works-item:not(:last-child) .how-it-works-hr {
+  position: relative;
+  top: -50px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 3px dashed var(--acsent-color-light-brown);
+}
+
+.how-it-works-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px 20px 40px;
+  background-color: var(--lite-bg-color);
+}
+
+.how-it-works-info::before {
+  counter-increment: number;
+  content: "0" counter(number);
+  align-self: flex-end;
+  margin: 0 0 45px;
+  padding: 0;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.how-it-works-item-heading {
+  margin: 0 0 10px;
+  padding: 0;
+  width: 100%;
+  max-width: 250px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.how-it-works-item-text {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
 
 /* RETINA */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -456,5 +577,9 @@ only screen and (min-resolution: 2dppx) {
 
   .features-inner {
     background-image: url("../img/features-page-bg@2x.jpg");
+  }
+
+  .how-it-works-inner {
+    background-image: url("../img/how-it-works-bg@2x.jpg");
   }
 }
